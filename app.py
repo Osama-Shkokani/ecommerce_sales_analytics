@@ -12,7 +12,7 @@ col1, col2 = st.columns(2)
 with col1:
   st.subheader("🔥 Top 5 Best-Selling Products")
   top_products = analytics.get_top_selling_products(limit=5)
-  st.dataframe(top_products,use_container_width=true)
+  st.dataframe(top_products,use_container_width=True)
   st.bar_chart(top_products.set_index("Description")["TotalQuantity"])
 
 with col2:
